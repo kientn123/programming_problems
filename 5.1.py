@@ -10,8 +10,8 @@ def update(n, m, i, j):
   j_pos = n >> (j + 1)
   j_pos <<= (j + 1)
   between = i_pos - j_pos
-  return (n & between) & (m << j)
+  return (n - between) + (m << i)
 
-n = 10000000000
-m = 10101
-print update(n, m, 2, 6)
+n = 69
+m = 5
+print update(n, m, 1, 3)
