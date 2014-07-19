@@ -14,4 +14,5 @@ def update(n, m, i, j):
 
 n = 69
 m = 5
+# Expected: 75
 print update(n, m, 1, 3)
