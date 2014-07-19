@@ -19,10 +19,10 @@ def dna_count(dna):
   result = [0] * 4
   for char in dna:
     result[mapping[char]] += 1
-  print '{0} {1} {2} {3}'.format(str(result[0]), str(result[1]), str(result[2]), str(result[3]))
+  return '{0} {1} {2} {3}'.format(str(result[0]), str(result[1]), str(result[2]), str(result[3]))
 
 if __name__ == '__main__':
   if len(sys.argv) == 2:
     f = open(sys.argv[1], 'r')
     dna = f.readline().strip()
-    dna_count(dna)
+    print dna_count(dna)
