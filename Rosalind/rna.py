@@ -17,9 +17,9 @@ GAUGGAACUUGACUACGUAAAUU
 
 import sys
 def convert(dna):
-  print dna.replace('T', 'U')
+  return dna.replace('T', 'U')
 
 if __name__ == '__main__':
   if len(sys.argv) == 2:
     f = open(sys.argv[1], 'r')
-    convert(f.readline().strip())
+    print convert(f.readline().strip())
