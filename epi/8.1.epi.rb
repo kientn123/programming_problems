@@ -36,14 +36,13 @@ class Node
   end
 
   def to_s
-    runner = self.next
+    runner = self
     to_print = ""
     while !runner.nil?
       to_print << runner.data.to_s + ", "
       runner = runner.next
     end
     to_print << "nil"
-    to_print
   end
 end
 
