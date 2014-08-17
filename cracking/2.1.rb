@@ -1,6 +1,6 @@
 =begin
  Write code to remove duplicates from an unsorted linked list
- Temporary buffer is not allowed 
+ Temporary buffer is not allowed
 =end
 
 # Model of a linked-list using hashes
@@ -15,12 +15,12 @@ head = { next: {
   }
 }
 
-class RemoveDuplicates
+class LinkedList
   def self.run(head)
     previous = head
     current = previous[:next]
     puts previous
-    puts current 
+    puts current
     puts "===="
     while !current.nil? do
       runner = head
@@ -47,6 +47,6 @@ end
 #previous[:next] = previous[:next][:next]
 #current = previous[:next]
 #previous = current
-RemoveDuplicates.run(head)
+LinkedList.run(head)
 #puts previous
 puts head
