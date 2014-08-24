@@ -15,6 +15,10 @@ class Node
 end
 
 def print_tree(root)
+  if root.nil?
+    print "nil root"
+    return
+  end
   queue = Array.new
   queue << root
   num_at_depth = [1, 0]
