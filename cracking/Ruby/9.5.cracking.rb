@@ -14,7 +14,7 @@ def find_string(arr, str)
 		middle = (left + right) / 2
 		while arr[middle].eql?("")
 			middle += 1 
-			# always find 1 that is not empty since right is not an empty string
+			# always find 1 that is not empty since arr[right] is not an empty string
 		end
 		if arr[middle].eql?(str)
 			return middle
