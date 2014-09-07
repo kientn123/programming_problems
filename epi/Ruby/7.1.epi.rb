@@ -18,14 +18,15 @@ def int_to_string(int)
 end
 
 def string_to_int(str)
+	is_negative = str[0] == '-'
 	to_return = 0
 	str.each_char do |c|
-		to_return = to_return * 10 + c.ord - '0'.ord
+		to_return = to_return * 10 + c.ord - '0'.ord if c != '-'
 	end
-	to_return
+	is_negative ? -to_return : to_return
 end
 
-str = '352624634'
-int = 22373768
+str = '-352624634'
+int = -22373768
 puts int_to_string(int)
 puts string_to_int(str)
