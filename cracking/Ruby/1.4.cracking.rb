@@ -16,7 +16,7 @@ def anagram(str1, str2)
   (0..arr1.length - 1).each do |i|
     return false if arr1[i] != arr2[i]
   end
-  return true
+  true
 end
 
 a = "hello"; b = "elolh"
