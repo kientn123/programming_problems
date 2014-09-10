@@ -8,4 +8,11 @@ def max(a, b)
 	a - k * c
 end
 
+def min(a, b)
+	c = a - b
+	k = (c >> 31)
+	a - (k+1) * c
+end
+
 puts max(4, 6)
+puts min(4, 6)
