@@ -9,17 +9,22 @@ def gc_content(s)
 end
 
 File.open(ARGV[0], 'r') do |f|
-  max = ''
-  max_count = 0
-  until true
-    name = f.gets.strip
-    s = f.gets.strip
-    count = gc_content(s)
-    if count > max_count
-      max_count = count
-      max = name
-    end
+  count = 0
+  f.each do |line|
+    count += 1
   end
-  puts name
-  puts max_count
+  puts count
+  # max = ''
+  # max_count = 0
+  # until true
+  #   name = f.gets.strip
+  #   s = f.gets.strip
+  #   count = gc_content(s)
+  #   if count > max_count
+  #     max_count = count
+  #     max = name
+  #   end
+  # end
+  # puts name
+  # puts max_count
 end

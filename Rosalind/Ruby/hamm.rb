@@ -12,5 +12,7 @@ end
 
 #puts hamm('GAGCCTACTAACGGGAT', 'CATCGTAATGACGGCCT')
 File.open(ARGV[0], 'r') do |f|
-  puts f.length()
+  s1 = f.gets.strip
+  s2 = f.gets.strip
+  puts hamm(s1, s2)
 end

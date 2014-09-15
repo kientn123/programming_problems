@@ -4,47 +4,41 @@
  such that no two leaf nodes differ in distance from the root by more than one 
 =end
 
+def is_balanced(tree) 
+  get_max_height(tree) - get_min_height(tree) <= 1
+end
 
-a_tree = {
-  data: 2,
-  left: {
-    data: 4
-  },
-  right: {
-    data: 7,
-    left: {
-      data: 6,
-      right: {
-        data: 10,
-        left: {
-          data: 15
-        }
-      }
-    }
-  }
-}
+def get_min_height(tree) 
+  if tree.nil?
+    0
+  else
+    1 + [(get_min_height(tree[:left]), get_min_height(tree[:right])].min
+  end     
+end
 
-class BalancedBinaryTree
-  def is_balanced tree 
-    (get_max_height tree) - (get_min_height tree) <= 1
-  end
-  
-  def get_min_height tree 
-    if tree.nil?
-      0
-    else
-      1 + [(get_min_height tree[:left]), (get_min_height tree[:right])].min
-    end     
-  end
-  
-  def get_max_height tree 
-    if tree.nil?
-      0
-    else
-      1 + [(get_max_height tree[:left]), (get_max_height tree[:right])].max
-    end
+def get_max_height(tree)
+  if tree.nil?
+    0
+  else
+    1 + [get_max_height(tree[:left]), get_max_height(tree[:right])].max
   end
 end
 
-manager = BalancedBinaryTree.new
-puts manager.is_balanced a_tree
+class Node
+  attr_accessor(:data, :right, :left)
+  def initialize(data)
+    @data = data
+  end
+
+  def to_s
+    @data.to_s
+  end
+
+  def print_tree
+    queue = [self]
+    until queue.length == 0
+      target = queue.shift
+      
+    end
+  end
+end

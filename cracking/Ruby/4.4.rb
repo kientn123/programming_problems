@@ -1,5 +1,6 @@
 =begin
- Given a binary search tree, design an algorithm which creates a linked list of all the nodes at each depth 
+Given a binary search tree, design an algorithm 
+which creates a linked list of all the nodes at each depth 
 =end
 
 # Idea: Of course: breadth-first-search would perfectly be a solution
