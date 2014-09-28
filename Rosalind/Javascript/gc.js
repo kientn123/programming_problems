@@ -14,8 +14,6 @@ function gcContent(s) {
   return (count * 100 / s.length).toFixed(6);
 }
 
-//console.log(gcContent('CCACCCTCGTGGTATGGCTAGGCATTCAGGAACCGGAGAACGCTTCAGACCAGCCCGGACTGGGAACCTGCGGGCAGTAGGTGGAAT'));
-
 var file = process.argv[2];
 var fs = require('fs');
 fs.readFile(file, {encoding: 'utf-8'}, function(err, data) {

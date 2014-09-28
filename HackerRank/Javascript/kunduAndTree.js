@@ -24,7 +24,7 @@ function dfs(graph) {
 }
 
 function calculateSum(components) {
-  var mod = 1000000007;
+  var mod = 1000000007 * 6;
   var connectedComponents = {}
   for (var nod in components) {
     var component = components[nod];

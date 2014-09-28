@@ -1,6 +1,7 @@
 # Implement an algorithm to determine if a string has all unique characters.
 # What if you can not use additional data structures?
 
+# The most intuitive one
 def is_unique(s):
   char_set = [False] * 256
   for char in s:
@@ -8,6 +9,8 @@ def is_unique(s):
     char_set[ord(char)] = True
   return True
 
+
+# Super clever algorithm. I like that
 def is_unique_2(s):
   runner = 0
   for char in s:
