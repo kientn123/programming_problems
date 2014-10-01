@@ -17,7 +17,7 @@ def find_k(arr, k)
 			left = mid + 1
 		end
 	end
-	result
+	return result
 end
 
 a = [1, 1, 2, 3, 3, 4, 5, 6, 6, 6, 7]
