@@ -8,7 +8,7 @@ class LinkedList
     m = Node.new(nil, nil)
     runner = m
     l = first.next; f = second.next
-    while !f.nil? and !l.nil?
+    while f && l
       if l.data < f.data
         runner.next = l
         l = l.next
@@ -18,10 +18,10 @@ class LinkedList
       end
       runner = runner.next
     end
-    while !f.nil?
+    while f
       runner.next = f; f = f.next; runner = runner.next
     end
-    while !l.nil?
+    while l
       runner.next = l; l = l.next; runner = runner.next
     end
     m
@@ -38,7 +38,7 @@ class Node
   def to_s
     runner = self
     to_print = ""
-    while !runner.nil?
+    while runner
       to_print << runner.data.to_s + ", "
       runner = runner.next
     end
