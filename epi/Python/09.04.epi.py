@@ -22,5 +22,23 @@ def longest(s):
       largest = top['count']
   return largest
 
+def longest_2(s):
+  start_off = -1
+  res = 0
+  stack = []
+  for i in range(len(s)):
+    if s[i] == '(':
+      stack.append(s[i])
+      start_off += 1
+    else:
+      if len(stack) == 0 or stack[-1] == ')':
+        start_off = i + 1
+      else:
+        res = max(res, i - start_off + 1)
+        start_off -= 1
+        stack.pop()
+  return res
+
 if __name__ == '__main__':
   print longest('((())()(()(')
+  print longest_2('((())()(()(')
