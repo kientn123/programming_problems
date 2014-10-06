@@ -12,6 +12,14 @@ def is_winnable(lst):
   return True
 
 if __name__ == '__main__':
+  # Visuals for lst
+  # |--|--|--|
+  #    |--|--|--|
+  #       |--|
+  #          |
+  #             |--|--|
+  #                |
+  #                   |--|--|
   lst = [3, 3, 1, 0, 2, 0, 1]
   lst2 = [3, 2, 0, 0, 2, 0, 1]
   print is_winnable(lst)
