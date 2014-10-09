@@ -14,6 +14,8 @@ class MaxQueue:
     self.max_data.append(n)
 
   def dequeue(self):
+    if self.data.empty():
+      return 'nothing else to dequeue'
     pop = self.data.get()
     if pop == self.max_data[0]:
       self.max_data.popleft()
