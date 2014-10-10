@@ -1,5 +1,7 @@
 # Determine if a tree is symmetric
 def is_symmetric(root):
+  if root == None:
+    return True
   return compare(root.left, root.right)
 
 def compare(a, b):
