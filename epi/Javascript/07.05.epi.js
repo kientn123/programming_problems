@@ -2,7 +2,7 @@
 Compute all mnemonics for a phone number
 */
 function mnemonics(str) {
-  hash = {
+  var hash = {
     '2': ['A', 'B', 'C'],
     '3': ['D', 'E', 'F'],
     '4': ['G', 'H', 'I'],
@@ -13,7 +13,7 @@ function mnemonics(str) {
     '9': ['W', 'X', 'Y', 'Z']
   };
 
-  res = [];
+  var res = [];
 
   function compute(aStr, start, store) {
     if (start >= aStr.length) {
