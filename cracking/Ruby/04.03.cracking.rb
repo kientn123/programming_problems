@@ -1,9 +1,10 @@
 =begin
- Given a sorted array (increasing order), write an algorithm to create a binary tree with minimal height 
+Given a sorted array (increasing order), write an algorithm to create
+a binary tree with minimal height 
 =end
 # Model of a tree
 tree = {
-  data: 4, 
+  data: 4,
   left: {
     data: 3
   },
@@ -16,7 +17,7 @@ class CreateBinarySearchTree
   def self.create array
     if array.nil? || array.length == 0
       nil
-    elsif 
+    elsif
       parent = {
         data: array[array.length/2]
       }
@@ -26,7 +27,7 @@ class CreateBinarySearchTree
       if array[array.length/2+1, array.length].length != 0
         parent[:right] = create array[array.length/2+1, array.length]
       end
-      parent 
+      parent
     end
   end
 end
