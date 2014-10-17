@@ -29,13 +29,13 @@ function findKUnbalanced(root, k) {
       };
     }
   } else {
-    if (left.node) {
+    if (left.node != null) {
       return {
-        node: root.left, total: 0
+        node: left.node, total: 0
       };
     } else {
       return {
-        node: root.right, total: 0
+        node: right.node, total: 0
       };
     }
   }
@@ -64,4 +64,4 @@ var a = new Node(314), b = new Node(6), c = new Node(271),
 a.left = b; a.right = i; b.left = c; b.right = f; c.left = d; c.right = e;
 f.right = g; g.left = h; i.left = j; j.right = k; k.left = l; k.right = n;
 l.right = m; i.right = o; o.right = p;
-console.log(solve(a, 3) == i);
+console.log(solve(a, 3) == j);
