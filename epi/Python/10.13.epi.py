@@ -24,6 +24,29 @@ def make_preorder(root):
     doit(root)
     return res
 
+def pre_order(root):
+    res = []
+    pre_order_helper(root, res)
+    return res
+
+def pre_order_helper(root, res):
+    if root:
+        res.append(root.name)
+        pre_order_helper(root.left, res)
+        pre_order_helper(root.right, res)
+
+def in_order(root):
+    res = []
+    in_order_helper(root, res)
+    return res
+
+def in_order_helper(node, res):
+    if node:
+        if node.left:
+            in_order_helper(node.left, res)
+        res.append(node.name)
+        if node.right:
+            in_order_helper(node.right, res)
 
 class Node():
     def __init__(self, data, name):
@@ -39,11 +62,13 @@ if __name__ == "__main__":
     j = Node(2,"j"); k = Node(1,"k"); l = Node(401,"l")
     m = Node(641,"m"); n = Node(257,"n"); o = Node(271,"o"); p = Node(28,"p")
 
-    # a.left = b; a.right = i; b.left = c; b.right = f; c.left = d; c.right = e;
-    # f.right = g; g.left = h; i.left = j; j.right = k; k.left = l; k.right = n;
-    # l.right = m; i.right = o; o.right = p;
-    preorder = [a, b, c, d, None, None, e, None, None, f, None,
-                g, h, None, None, None, i, j, None, k, l, None,
-                m, None, None, n, None, None, o, None, p, None, None]
-    build_tree(preorder)
-    print make_preorder(a)
+    a.left = b; a.right = i; b.left = c; b.right = f; c.left = d; c.right = e;
+    f.right = g; g.left = h; i.left = j; j.right = k; k.left = l; k.right = n;
+    l.right = m; i.right = o; o.right = p;
+    # preorder = [a, b, c, d, None, None, e, None, None, f, None,
+    #             g, h, None, None, None, i, j, None, k, l, None,
+    #             m, None, None, n, None, None, o, None, p, None, None]
+    # build_tree(preorder)
+    # print make_preorder(a)
+    print pre_order(a)
+    print in_order(a)
