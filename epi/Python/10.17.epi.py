@@ -12,24 +12,23 @@ class Node():
         self.right = None
         self.parent = None
         self.locked = False
+        self.num_children_locked = 0
 
     def is_locked(self):
         return self.locked
 
     def unlock(self):
-        self.locked = False
-        print "successfully unlocked "+str(self.data)
+        if self.is_locked():
+            self.locked = False
+            n = self.parent
+            while n:
+                n.num_children_locked -= 1
+                n = n.parent
+            print "successfully unlocked "+str(self.data)
+        else:
+            print str(self.data) + " is not locked"
 
     def lock(self):
-        def has_descendant_locked(node):
-            if node == None:
-                return False
-            if node.is_locked():
-                return True
-            left = has_descendant_locked(node.left)
-            right = has_descendant_locked(node.right)
-            return left or right
-
         def has_ancestor_locked(node):
             if node == None:
                 return False
@@ -37,11 +36,15 @@ class Node():
                 return True
             return has_ancestor_locked(node.parent)
 
-        if has_ancestor_locked(self) or has_descendant_locked(self):
+        if has_ancestor_locked(self) or self.num_children_locked > 0:
             print "cannot change the state to lock "+str(self.data)
         else:
             print "ok to lock: " + str(self.data)
             self.locked = True
+            n = self.parent
+            while n:
+                n.num_children_locked += 1
+                n = n.parent
 
 if __name__ == "__main__":
     a = Node(314); b = Node(6); c = Node(271)
