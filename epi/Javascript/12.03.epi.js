@@ -1,5 +1,5 @@
 /*
-Search a sorted array for A[i] = i
+Search a sorted array for A[i] == i
 Design an efficient algorithm that takes a sorted array A of distinct numbers, and returns
 an index i such that A[i] = i; if no such index exists, return -1
 */
