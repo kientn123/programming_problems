@@ -24,7 +24,7 @@ function search(arr, k) {
 
     var left = Math.max(0, 1 << (p-1)), right = (1<<p) - 2;
     while (left <= right) {
-        var mid = (left + right)/2;
+        var mid = Math.floor((left + right)/2);
         if (arr[mid] == undefined) {
             right = mid - 1;
         } else if (arr[mid] == k) {
