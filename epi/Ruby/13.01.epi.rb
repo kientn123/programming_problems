@@ -13,7 +13,7 @@ def anagrams(set)
 
 	hash.each do |key, value|
 		if value.length >= 2
-			to_print = ""
+			to_print = ""lib
 			value.each do |word|
 				to_print << word + ", "
 			end
