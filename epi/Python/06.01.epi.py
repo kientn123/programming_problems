@@ -8,11 +8,11 @@ def pivot(arr, i):
         if arr[j] < target:
             swap(arr, left, j)
             left += 1
-        runner = left
-        for j in range(left, len(arr)):
-            if arr[j] == target:
-                swap(arr, runner, j)
-                runner += 1
+    runner = left # runner plays a role like left does above
+    for j in range(left, len(arr)):
+        if arr[j] == target:
+            swap(arr, runner, j)
+            runner += 1
 
 def swap(arr, i, j):
     arr[i], arr[j] = arr[j], arr[i]
