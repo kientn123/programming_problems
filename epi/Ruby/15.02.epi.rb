@@ -7,11 +7,8 @@ If k is absent, return nil
 def first_appearence_k(root, k)
   return nil if root.nil?
   if root.data == k
-    if root.left && root.left.data == k
-      return first_appearence_k(root.left, k)
-    else
-      return root
-    end
+    node = first_appearence_k(root.left, k)
+    return node ? node : root
   elsif root.data < k
     return first_appearence_k(root.right, k)
   else
@@ -22,13 +19,11 @@ end
 # Iterative approach
 def first_appearence_k_v2(root, k)
   target = root
+  res = nil
   while target
     if target.data == k
-      if target.left && target.left.data == k
-        target = target.left
-      else
-        return target
-      end
+      res = target
+      target = target.left
     elsif target.data < k
       target = target.right
     else
@@ -36,7 +31,7 @@ def first_appearence_k_v2(root, k)
     end
   end
 
-  return nil
+  return res
 end
 
 class Node
