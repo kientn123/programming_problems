@@ -12,7 +12,7 @@ def assignment(arr)
 	0.upto(arr.length/2 - 1) do |i|
 		res << [arr[i], arr[arr.length-1-i]]
 	end
-	
+
 	return res
 end
 
