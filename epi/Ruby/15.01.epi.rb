@@ -5,19 +5,18 @@ nodes of its left subtree and less than or equal to the keys stored in the nodes
 right subtree.
 =end
 def is_binary_tree(root)
+  return is_binary_tree_helper(root, -Float::INFINITY, Float::INFINITY)
+end
+
+def is_binary_tree_helper(root, lower, upper)
   if root.nil?
     return true
-  end
-
-  if root.left && root.left.data > root.data
+  elsif root.data < lower || root.data > upper
     return false
+  else
+    return is_binary_tree_helper(root.left, lower, root.data) &&
+      is_binary_tree_helper(root.right, root.data, upper)
   end
-
-  if root.right && root.right.data < root.data
-    return false
-  end
-
-  return is_binary_tree(root.left) && is_binary_tree(root.right)
 end
 
 class Node
