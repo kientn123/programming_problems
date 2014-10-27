@@ -15,7 +15,7 @@ def pre_order(root):
         if target.left:
             stack.append(target.left)
     return res
-
+    
 class Node():
     def __init__(self, data, name):
         self.data = data
