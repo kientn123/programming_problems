@@ -17,8 +17,11 @@ import sys
 def fib(n, k):
   ''' Formula: S(n) = S(n-1) + S(n-2)*3 '''
   mapping = {1: 1, 2: 1}
+  return fibo(n, k, mapping)
+
+def fibo(n, k, mapping):
   if n not in mapping:
-    mapping[n] = fib(n-1, k) + k * fib(n-2, k)
+    mapping[n] = fibo(n-1, k, mapping) + k * fibo(n-2, k, mapping)
   return mapping[n]
 
 if __name__ == '__main__':
