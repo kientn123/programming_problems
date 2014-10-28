@@ -28,3 +28,11 @@ class BST():
                 prev.left = p
             else:
                 prev.right = p
+        else:
+            self.root = p
+
+    def remove(self, p):
+        if self.root:
+            prev = None
+            curr = self.root
+            
