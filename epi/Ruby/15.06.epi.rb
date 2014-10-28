@@ -43,6 +43,14 @@ class Node
   end
 end
 
+def reconstruct_tree_v2(preorder)
+
+end
+
+def tree_helper_v2(preorder, min, max, index)
+
+end
+
 a = Node.new(19,"a"); b = Node.new(7,"b"); c = Node.new(3,"c")
 d = Node.new(2,"d"); e = Node.new(5,"e"); f = Node.new(11,"f")
 g = Node.new(17,"g"); h = Node.new(13,"h"); i = Node.new(43,"i")
