@@ -3,7 +3,7 @@
 # is less than every key in the right substree. The subtrees themselves are min-first BSTs
 # Write a function that takes a min-first BST T and a key k, and returns true iff T contains k
 def contains(root, k):
-    if root == None:
+    if root == None or k < root.data:
         return False
     if root.data == k:
         return True
