@@ -2,6 +2,7 @@
 Design an efficient algorithm for computing the GCD of two numbers without using multiplication,
 division or modulus operators
 =end
+# O(loga + logb) solution
 def gcd(a, b)
   puts [a, b].to_s
   return b if a == 0

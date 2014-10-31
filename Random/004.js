@@ -5,6 +5,7 @@ parent node of that particular index. The value of the root index would be -1.
 Find the height of the tree
 Input: parent[] = [1,5,5,2,2,-1,3]
 Ouput: 4
+http://www.geeksforgeeks.org/find-height-binary-tree-represented-parent-array/
 */
 function solve(parent) {
   // create a depth array represent the depth at every node
