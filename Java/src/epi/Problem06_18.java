@@ -1,6 +1,11 @@
 package epi;
 import java.util.*;
-
+/**
+ * Design an algorithm that computes an array of size k consisting of distinct integers in the
+ * set [0,1,..,n-1]. All subsets should be equally likely and, in addition, all permutations
+ * of elements of the array should be equally likely. Your time complexity should be O(k).
+ * Your algorithm can use O(k) space in addition to the k element array for the result.
+ */
 public class Problem06_18 {
 
 	public static void main(String[] args) {
