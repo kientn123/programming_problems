@@ -20,15 +20,15 @@ public class Tree004 {
 		if (root==null) return null;
 		int count=k;
 		Stack<Pair<Node, Boolean>> stack = new Stack<>();
-		stack.push(new Pair(root, false));
+		stack.push(new Pair<>(root, false));
 		while (!stack.empty()) {
 			Pair<Node, Boolean> top = stack.pop();
 			if (top.second) {
 				if (--count==0) return top.first;
 			} else {
-				if (top.first.right!=null) stack.add(new Pair(top.first.right, false));
-				stack.add(new Pair(top.first, true));
-				if (top.first.left!=null) stack.add(new Pair(top.first.left, false));
+				if (top.first.right!=null) stack.add(new Pair<>(top.first.right, false));
+				stack.add(new Pair<>(top.first, true));
+				if (top.first.left!=null) stack.add(new Pair<>(top.first.left, false));
 			}
 		}
 		
