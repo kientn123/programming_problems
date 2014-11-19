@@ -4,6 +4,7 @@ package onlineResources;
  * Check for majority element in a sorted array
  * Write a function isMajority() which takes an array and an element and returns true if x is the
  * majority element, false otherwise
+ * http://www.geeksforgeeks.org/check-for-majority-element-in-a-sorted-array/
  * @author kiennguyen
  *
  */
