@@ -4,6 +4,7 @@ package onlineResources;
  * Count the number of occurrences in a sorted array
  * Given a sorted array arr and a number x, write a function that counts the occurrences of x in arr.
  * Expected time complexity O(logn)
+ * http://www.geeksforgeeks.org/count-number-of-occurrences-in-a-sorted-array/
  * @author kiennguyen
  *
  */
