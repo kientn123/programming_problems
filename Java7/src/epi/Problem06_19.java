@@ -1,6 +1,8 @@
 package epi;
-import java.util.*;
 
+import java.util.ArrayList;
+import java.util.Random;
+import java.util.Scanner;
 /*
  * Design an algorithm that reads packets and continuously maintains a uniform random subset
  * of size k of the packets after n > k-th packets are read

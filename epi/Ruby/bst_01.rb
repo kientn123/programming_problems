@@ -14,7 +14,7 @@ def is_binary_tree_helper(root, lower, upper)
   elsif root.data < lower || root.data > upper
     return false
   else
-    return is_binary_tree_helper(root.left, lower, root.data) &&
+    is_binary_tree_helper(root.left, lower, root.data) &&
       is_binary_tree_helper(root.right, root.data, upper)
   end
 end
